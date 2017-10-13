@@ -5108,9 +5108,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-async-component@latest:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/vue-async-component/-/vue-async-component-1.0.0.tgz#aba84bbb78af77d02d9c8ab9e7de0eebbf680802"
+vue-async-component@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/vue-async-component/-/vue-async-component-1.0.6.tgz#8aa1551abce2da924f2190dd22971c40d595caf7"
   dependencies:
     axios "^0.16.2"
     vue "^2.4.2"
@@ -5136,6 +5136,10 @@ vue-loader@^13.0.5:
     vue-hot-reload-api "^2.1.0"
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
+
+vue-router@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-2.7.0.tgz#16d424493aa51c3c8cce8b7c7210ea4c3a89aff1"
 
 vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
   version "3.0.3"

@@ -13,6 +13,8 @@ module.exports = {
   output: {
     path: resolve('/'),
     filename: '[name].min.js',
+    library: "SyncComponent",
+    libraryTarget: "umd"
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -22,31 +24,19 @@ module.exports = {
     }
   },
   externals: {
-    vue: 'vue',
-    axios: 'axios'
+    vue: 'vue'
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: utils.cssLoaders({
-            sourceMap: true,
-            extract: false          // css 不做提取
-          }),
-          transformToRequire: {
-            video: 'src',
-            source: 'src',
-            img: 'src',
-            image: 'xlink:href'
-          }
-        }
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src')],
+        exclude: /node_modules/
       }
     ]
   },
@@ -56,10 +46,12 @@ module.exports = {
     }),
     // UglifyJs do not support ES6+, you can also use babel-minify for better treeshaking: https://github.com/babel/minify
     new webpack.optimize.UglifyJsPlugin({
+      minimize : true,
+      sourceMap : false,
+      mangle: true,
       compress: {
         warnings: false
-      },
-      sourceMap: true
+      }
     })
   ]
 };

@@ -8,15 +8,24 @@
 | url     | 组件远程地址          |      string     |          —            |    —     |
 
 
-### 引入：
+### 开始：
 
+基于Node.js的开发环境：
 ```
   import SyncComponent from 'vue-async-component';
 
-  // vue 中调用组件
   <sync-component
     url="http://localhost:8083/static/app.js">
   </sync-component>
+```
+
+浏览器环境：
+
+```
+  <script type="text/javascript" src="SyncComponent.min.js"></script>
+  <script type="text/javascript">
+    Vue.use(SyncComponent);
+  </script>
 ```
 
 ### 注意事项
