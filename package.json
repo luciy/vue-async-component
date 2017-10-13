@@ -1,6 +1,6 @@
 {
   "name": "vue-async-component",
-  "version": "1.0.7",
+  "version": "1.0.13",
   "description": "For Vue projects, load asynchronous modules through remote links",
   "author": "luciy <lengxu@uis.cc>",
   "repository": {
