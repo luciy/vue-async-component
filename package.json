@@ -1,6 +1,6 @@
 {
   "name": "vue-async-component",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "For Vue projects, load asynchronous modules through remote links",
   "author": "luciy <lengxu@uis.cc>",
   "repository": {
@@ -14,8 +14,8 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
-    "build": "node build/build-sync-components-library.js",
-    "buildSC": "node build/build-sync-components.js",
+    "build": "node build/build-async-components-library.js",
+    "buildSC": "node build/build-async-components.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "main": "SyncComponent.min.js",

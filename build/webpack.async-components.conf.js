@@ -8,12 +8,12 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    SyncComponent: resolve('/src/components/sync-component')
+    AsyncComponent: resolve('/src/components/async-component')
   },
   output: {
     path: resolve('/'),
     filename: '[name].min.js',
-    library: "SyncComponent",
+    library: "AsyncComponent",
     libraryTarget: "umd"
   },
   resolve: {

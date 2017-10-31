@@ -9,15 +9,15 @@
       placeholder="请输入内容"
       v-model="textarea">
     </el-input>
-    <SyncComponentRE
+    <AsyncComponentRE
       :url="renderUrl"
       :textarea.sync="textarea">
-    </SyncComponentRE>
+    </AsyncComponentRE>
   </div>
 </template>
 
 <script>
-  import SyncComponentRE from '@/../SyncComponent.min.js';
+  import AsyncComponentRE from '@/../AsyncComponent.min.js';
   export default {
     name: 'LayoutView',
     data() {
@@ -29,7 +29,7 @@
       };
     },
     components: {
-      SyncComponentRE
+      AsyncComponentRE
     },
     methods: {
       handleLoadButtonClick(type) {

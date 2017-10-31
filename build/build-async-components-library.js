@@ -7,9 +7,9 @@ const ora = require('ora')
 const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
-const webpackConfig = require('./webpack.sync-components.prod.conf')
+const webpackConfig = require('./webpack.async-components.conf')
 
-const spinner = ora('building for sync-components...')
+const spinner = ora('building for async-components...')
 spinner.start()
 
 webpack(webpackConfig, function (err, stats) {
